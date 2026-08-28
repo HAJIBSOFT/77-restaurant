@@ -1,0 +1,18 @@
+{
+  "name": "سيفنتي سفن | Seventy Seven",
+  "short_name": "Seventy 77",
+  "description": "مطعم 77 - برجر مشوي على الحطب بلاك أنجوس أمريكي طازج",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fcfbfa",
+  "theme_color": "#125c38",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwaMKQM_-ANFqe46NjYz63MWK-SNYvmawzDWUuETWIJbQOlS073OCRrPH-xedO23W2RJvbaKfCEBPDX-YOOjFTpgD736l5UzBgwjlPLfrwagwLHfIzqNae_LWXFwNzNW_yIUHACvS692gSs-VE8V0v_e975XbwIx5tJikbwQ9CXflIQg68EBGwDhSWIpEd/s592/LOGO.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

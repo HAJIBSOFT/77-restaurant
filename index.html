@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>برجر 77 -قائمة الطعام|HAJIB SOFT</title>
     
+    <!-- وسم ربط تطبيق الويب التقدمي (PWA) -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#125c38">
+    
+    <!-- إعدادات مخصصة لدعم التثبيت على هواتف آيفون (iOS) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwaMKQM_-ANFqe46NjYz63MWK-SNYvmawzDWUuETWIJbQOlS073OCRrPH-xedO23W2RJvbaKfCEBPDX-YOOjFTpgD736l5UzBgwjlPLfrwagwLHfIzqNae_LWXFwNzNW_yIUHACvS692gSs-VE8V0v_e975XbwIx5tJikbwQ9CXflIQg68EBGwDhSWIpEd/s592/LOGO.png">
     
     <meta name="description" content="مطعم 77 - برجر مشوي على الحطب بلاك أنجوس أمريكي طازج، بطاطس مقرمشة وأطباق جانبية مميزة. تصفح قائمتنا الآن!">
 
-   
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hajibsoft.github.io/77-restaurant/"> 
     <meta property="og:title" content="مطعم 77 | برجر مشوي على الحطب">
@@ -899,7 +906,7 @@
 "name": "فرايز كلاسيك",
 "category": "فرايز",
 "basePrice": 7,
-"image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD2iqqtpTEO20HejodCFaWO9GYvr63qZwgj_ytjwqk2WxyMS7wQWbSGi1YNLA3unj7tzNe3ye4MDoNLbGKcwdRTFpeI3R8YXMTDfqBwHBa13lfnAUp_FexVfqopsIGocF2eeD06pAzVbVEz6-PpRDEUSihx3xaqCgVHcE11jio2uvFPqoNTZbUmYwto56z/s1280/%D9%8Standard%20Fries.jpeg",
+"image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD2iqqtpTEO20HejodCFaWO9GYvr63qZwgj_ytjwqk2WxyMS7wQWbSGi1YNLA3unj7tzNe3ye4MDoNLbGKcwdRTFpeI3R8YXMTDfqBwHBa13lfnAUp_FexVfqopsIGocF2eeD06pAzVbVEz6-PpRDEUSihx3xaqCgVHcE11jio2uvFPqoNTZbUmYwto56z/s1280/%D9%Standard%20Fries.jpeg",
 "description": "أصابع بطاطس مقلية ومقرمشة تقدم ذهبية مع صوص 77 الخاص",
 "attributes": [],
 "customizations": []
@@ -1019,7 +1026,7 @@
 "name": "صوص الباربيكيو",
 "category": "الصوصات",
 "basePrice": 3,
-"image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-wViBNcmMRenLCRshknZ28lfbf9KIaVTVp2LjVIUNIl3HRq4Q9oHyX-hE38eQJ2P93c-w9RVCb1z-5EPkNo0Bc6H8GC5M_O3A1PeGSckbeIWDTar4ua74abW7w4JHzFwSXD0eVBMM19CyKONzAX7Bmm1w4UPFLIgpam3az2dxdz77UVFPRjCfd581prKC/s1284/%D8%A7%D9%84%D8%A8%D8%A7%D8%B1%D8%A8%D9%8A%D9%83%D9%82.jpeg",
+"image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-wViBNcmMRenLCRshknZ28lfbf9KIaVTVp2LjVIUNIl3HRq4Q9oHyX-hE38eQJ2P93c-w9RVCb1z-5EPkNo0Bc6H8GC5M_O3A1PeGSckbeIWDTar4ua74abW7w4JHzFwSXD0eVBMM19CyKONzAX7Bmm1w4UPFLIgpam3az2dxdz77UVFPRjCfd581prKC/s1284/%D8%A7%D9%84%D8%A8%D8%A7%D8%B1%D8%A8%D9%8A%D9%83%D9%8ق.jpeg",
 "description": "طعم مدخن ساحر مع لمسة حلاوة متوازنة تُبرز نكهة الشواء الحقيقية",
 "attributes": [],
 "customizations": []
@@ -1276,6 +1283,17 @@
                 if (loadingScreen) loadingScreen.classList.add('hidden');
             }
         });
+    </script>
+    
+    <!-- وسم تسجيل الـ Service Worker لتفعيل مميزات تطبيق الويب التقدمي (PWA) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('تم تسجيل الـ Service Worker بنجاح:', reg.scope))
+                    .catch(err => console.error('فشل في تسجيل الـ Service Worker:', err));
+            });
+        }
     </script>
 </body>
 </html>
